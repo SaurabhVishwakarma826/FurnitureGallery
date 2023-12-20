@@ -2,9 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .contact-form {
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 6px;
+            color: #555;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-this is contact page
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+
+        <!-- Display form errors -->
+        {% if form.errors %}
+            <div class="error-message">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        {{ field }}: {{ error }}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="post" id="contactForm">
+            {% csrf_token %}
+            <label for="id_name">Name:</label>
+            {{ form.name }}
+
+            <label for="id_email">Email:</label>
+            {{ form.email }}
+
+            <label for="id_phone">Phone:</label>
+            {{ form.phone }}
+
+            <label for="id_address">Address:</label>
+            {{ form.address }}
+
+            <label for="id_description">Description:</label>
+            {{ form.description }}
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // You can add JavaScript functionality here if needed
+        // For example, you might want to add form validation
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            // Example: Validate the form fields before submitting
+            if (!validateForm()) {
+                event.preventDefault();
+            }
+        });
+
+        function validateForm() {
+            // Example: Add your own validation logic here
+            var name = document.getElementById('id_name').value;
+            var email = document.getElementById('id_email').value;
+
+            if (name.trim() === '') {
+                alert('Name is required.');
+                return false;
+            }
+
+            // You can add more validation rules as needed
+
+            return true;
+        }
+    </script>
 </body>
 </html>

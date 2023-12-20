@@ -16,16 +16,16 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
-
+            contact_instance = form.save()
             # Send email
             subject = 'New Inquiry'
-            message = f'Name: {form.cleaned_data["name"]}\nEmail: {form.cleaned_data["email"]}\nPhone: {form.cleaned_data["phone"]}\nAddress: {form.cleaned_data["address"]}\nDescription: {form.cleaned_data["description"]}'
+            message = f'Name: {contact_instance.name}\nEmail: {contact_instance.email}\nPhone: {contact_instance.phone}\nAddress: {contact_instance.address}\nDescription: {contact_instance.description}'
             from_email = settings.DEFAULT_FROM_EMAIL
             recipient_list = [settings.NOTIFY_EMAIL]  # Replace with your email
             send_mail(subject, message, from_email, recipient_list, fail_silently=True)
+            print("email send successfully")
+            return redirect('/')  # Create a success page
 
-            return redirect('success')  # Create a success page
     else:
         form = ContactForm()
 

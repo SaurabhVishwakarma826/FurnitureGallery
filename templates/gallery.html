@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Gallary</title>
-</head>
-<body>
-this is gallary page
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+    <div class="services">
+        <div class="section-title text-center" style="margin-top: 0">
+            <h1>Gallery</h1>
+        </div>
+
+        <section id="product1" class="section-p1">
+            <div class="pro-container">
+                {% for image in images %}
+                    <div class="pro">
+                        <img src="{{ image.image.url }}"/>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,616 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+/* top-bar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: White;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/* navbar */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: White;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+section .left-header img {
+  height: 80px;
+  width: 80px;
+  border: 1px solid black;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.left-header a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3 ease;
+}
+
+.left-header a:nth-child(2) {
+  margin-left: 20px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3 ease;
+}
+
+/* #navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+} */
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: red;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+/* navbar end */
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
+  height: 700px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.custom-caption {
+  position: absolute;
+  top: 36%;
+  left: 40%;
+
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.custom-caption p {
+  color: white;
+  font-size: 30px;
+}
+
+.custom-caption h1 {
+  color: white;
+}
+
+/* about us */
+.about-us-container {
+  margin-top: 50px;
+}
+
+.about-us-image img {
+  width: 100%;
+  height: auto;
+}
+
+.about-us-content {
+  padding: 20px;
+}
+
+.about-us-content .offer {
+  margin-top: 15px;
+  font-weight: 20px !important;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.about-us-content .btn {
+  background-image: url("https://media.istockphoto.com/id/1124714939/photo/brown-walnut-timber-tree-wood-grain-structure-texture-background-backdrop.jpg?s=612x612&w=0&k=20&c=clrtSGRyfyJ3IQr1Ou2HB0nt20PMOkZyQ3K0JGtuurA=");
+  border: none;
+  color: white;
+  width: 10vw;
+  height: 6vh;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.about-us-content span {
+  font-weight: bold;
+  color: rgb(79, 32, 15);
+}
+
+/* services */
+.section-title h1 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1;
+  margin: 0;
+  margin-top: 100px;
+}
+
+.section-title.text-center p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  margin-top: 15px;
+  line-height: 26px;
+}
+
+#product1 {
+  text-align: center;
+}
+
+#product1 .pro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+#product1 .pro {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#product1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
+}
+
+#product1 .pro img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+}
+
+#product1 .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span {
+  color: #1a1a1a;
+
+  font-size: 20px;
+}
+
+#product1 .pro .des h5 {
+  padding-top: 7px;
+  color: #606063;
+  font-size: 20px;
+}
+
+#product1 .pro .des i {
+  font-size: 12px;
+  color: rgb(234, 181, 25);
+}
+
+#product1 .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#product1 .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  bottom: 20px;
+  right: 10px;
+  position: absolute;
+}
+
+/* faqs */
+
+.faq-container {
+  margin-top: 8%;
+}
+
+.faq-header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.faq {
+  border-bottom: 1px solid rgb(79, 32, 15);
+  padding: 30px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+  font-size: 30px;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+  font-size: 22px;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.chevron,
+.close {
+  width: 12px;
+  height: 12px;
+}
+
+.faq-toggle .close {
+  display: none;
+}
+
+.faq.active .faq-toggle .close {
+  display: block;
+}
+
+.faq.active .faq-toggle .chevron {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: black;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* faqs end */
+
+.funfact-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  /* z-index: 1; */
+  background-image: url("https://danslacuisinededede.com/wooding/assets/images/bg/funfact-bg.jpg");
+  background-color: #f8f8f8 !important;
+  float: left;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 400px;
+}
+
+.funfact-section::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #000000;
+  opacity: 0.75;
+  /* z-index: -1; */
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-evenly !important;
+  padding: 0px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer-section {
+  padding: 20px;
+}
+
+.footer-section h2 {
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+}
+
+.footer-section form {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.footer-section input[type="email"] {
+  width: 200px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.footer-section button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section li a:hover {
+  text-decoration: underline;
+}
+
+/* contact page */
+.contact-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  gap: 25px;
+}
+
+.contact-main .col-lg-5 {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+}
+
+.contact-main .col-lg-5 p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.contact-main .icons i {
+  font-size: 25px;
+  margin-top: 13px;
+}
+
+.contact-main .icons {
+  gap: 20px;
+}
+
+.contact-main .col-lg-7 {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+}
+
+.contact-main .col-lg-7 form {
+  padding: 10px;
+}
+
+.contact-main .col-lg-7 .btn {
+  background-image: url("https://media.istockphoto.com/id/1124714939/photo/brown-walnut-timber-tree-wood-grain-structure-texture-background-backdrop.jpg?s=612x612&w=0&k=20&c=clrtSGRyfyJ3IQr1Ou2HB0nt20PMOkZyQ3K0JGtuurA=");
+  border: none;
+  color: white;
+  width: 10vw;
+  height: 6vh;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  height: 38px;
+}
+
+/* reponsive */
+
+/* responsive */
+@media (max-width: 550px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+
+  /* navbar */
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 30px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 70%;
+    color: #222;
+    font-size: 30px;
+  }
+
+  #lg-bag {
+    display: none;
+  }
+
+  section .left-header img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .left-header a:nth-child(2) {
+    margin-left: 0px;
+  }
+
+  .left-header a {
+    font-size: 20px;
+  }
+
+  #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 14px 0px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  /* carausel */
+  .carousel-item img {
+    height: 341px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .about-us-content h1 {
+    display: none;
+  }
+
+  .about-us-content .btn {
+    width: 34vw;
+    height: 7vh;
+  }
+
+  #product1 .pro {
+    width: 23%;
+    min-width: 350px;
+  }
+
+  .faq-header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .faq-title {
+    margin: 0 35px 0 0;
+    font-size: 15px;
+  }
+
+  .faq.active .faq-text {
+    display: block;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  footer {
+    display: block;
+  }
+
+  .contact-main {
+    display: block;
+  }
+  .contact-main .col-lg-5 {
+    padding: 0;
+    width: 98vw;
+    margin-left: -76px;
+  }
+  .contact-main .col-lg-7 {
+    padding: 25px;
+    width: 100vw;
+    margin-left: -71px;
+  }
+}

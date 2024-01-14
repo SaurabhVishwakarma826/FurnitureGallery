@@ -24,7 +24,7 @@ def contact(request):
             recipient_list = [settings.NOTIFY_EMAIL]  # Replace with your email
             send_mail(subject, message, from_email, recipient_list, fail_silently=True)
             print("email send successfully")
-            return redirect('/')  # Create a success page
+            return redirect('/contact')  # Create a success page
 
     else:
         form = ContactForm()

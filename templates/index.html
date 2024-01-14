@@ -1,10 +1,293 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index</title>
-</head>
-<body>
-this is index page
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- carausel -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://studyhub.org.uk/wp-content/uploads/2023/11/handsome-carpenter-working-with-wood-1-scaled.jpg"
+                 class="d-block w-100" alt="..."/>
+            <!-- <div class="custom-caption">
+        <h1>First slide label</h1>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div> -->
+        </div>
+        <div class="carousel-item">
+            <img src="https://4-hontario.ca/wp-content/uploads/2020/09/Woodworking-L2_Main-Image-1920x1080.jpeg"
+                 class="d-block w-100" alt="..."/>
+            <!-- <div class="custom-caption">
+        <h1>Second slide label</h1>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div> -->
+        </div>
+        <div class="carousel-item">
+            <img src="https://hitechfm.com/wp-content/uploads/2023/05/approach.jpg" class="d-block w-100"
+                 alt="..."/>
+            <!-- <div class="custom-caption">
+        <h1>Third slide label</h1>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div> -->
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- about us -->
+<div class="container about-us-container">
+    <div class="row">
+        <div class="col-lg-6 about-us-image">
+            <img src="https://media.istockphoto.com/id/1061173208/photo/young-carpenter-using-sander-while-working-on-a-piece-of-wood.jpg?s=612x612&w=0&k=20&c=dG_8gk4Zkfq2hsXcxZSHzc1e39QpQODb5AXvx1dWRAw="
+                 alt="Woodworking Image"/>
+        </div>
+        <div class="col-lg-6 about-us-content">
+            <h1>About Us</h1>
+            <p class="offer">WE OFFER A WIDE SECTION OF WOODWORK SERVICES.</p>
+
+            <p>
+                As a premier carpentry and woodwork company, we take pride in
+                transforming your visions into timeless creations. With a commitment
+                to precision and a passion for quality, our skilled artisans
+                seamlessly blend traditional woodworking techniques with
+                cutting-edge technology to deliver bespoke solutions for
+                residential, commercial, and industrial projects. From custom
+                furniture pieces to intricate architectural elements,
+                <span>Carpentry</span> is dedicated to crafting enduring
+                masterpieces that elevate spaces and tell unique stories through the
+                beauty of wood.
+            </p>
+            <button class="btn">Connect Us</button>
+        </div>
+    </div>
+</div>
+
+<!-- services -->
+<div class="services">
+    <div class="section-title text-center">
+        <h1>Our Services</h1>
+        <p>
+            Transforming dreams into tangible beauty, we craft spaces with
+            unparalleled woodworking.
+        </p>
+    </div>
+
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <div class="pro">
+                <img src="https://carpentryandhandymanconceptsllc.com/wp-content/uploads/2019/08/General-Carpentry-1.jpg"
+                     alt=""/>
+                <div class="des">
+                    <span>Custom Furniture</span>
+                    <h5>
+                        Crafting unique and personalized furniture pieces tailored to
+                        client specifications.
+                    </h5>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="https://images.homify.com/w_600,c_fill,q_auto,a_0,f_auto/v1556183786/p/photo/image/3027728/modern-sofa-model-big.jpg"
+                     alt=""/>
+                <div class="des">
+                    <span>Furniture Modeling</span>
+                    <h5>
+                        Specializing in meticulous and tailored furniture modeling to
+                        elevate your living spaces.
+                    </h5>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="https://www.homepreservationmanual.com/wp-content/uploads/2018/03/DSC_3895-1024x678.jpg"
+                     alt=""/>
+                <div class="des">
+                    <span>Trim Work</span>
+                    <h5>
+                        Adding decorative moldings, baseboards, and other finishing
+                        touches to enhance interior aesthetics.
+                    </h5>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="https://www.invaluable.com/blog/wp-content/uploads/sites/77/2020/05/antique-furniture-restoration-hero.jpg"
+                     alt=""/>
+                <div class="des">
+                    <span>Restoration</span>
+                    <h5>
+                        Repairing and restoring old or damaged wooden structures,
+                        furniture, and fixtures.t
+                    </h5>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="https://lindlumber.com/sites/lindlumber_01/images/750x450/trek-decking-750x450.jpg"
+                     alt=""/>
+                <div class="des">
+                    <span>Decking and Fencing</span>
+                    <h5>
+                        Building and installing wooden decks, fences, and outdoor
+                        structures.
+                    </h5>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="https://www.lamiwood.in/wp-content/uploads/2021/09/533-shutterstock_772176259-ok-MRG-copy.jpg"
+                     alt=""/>
+                <div class="des">
+                    <span>Wood Flooring</span>
+                    <h5>
+                        Installing, refinishing, or repairing wooden flooring for
+                        residential and commercial spaces.
+                    </h5>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="https://fetzerwood.com/oak/files/projects/seahawk-yacht/cover-small.jpg" alt=""/>
+                <div class="des">
+                    <span>Architectural Woodwork</span>
+                    <h5>
+                        Creating intricate wooden elements for architectural
+                        enhancements in buildings.
+                    </h5>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/3/NI/FX/XY/120951775/metal-furniture-structure.jpg"
+                     alt=""/>
+                <div class="des">
+                    <span>Structural Framing</span>
+                    <h5>Constructing the framework for buildings and structures.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- <div class="funfact-section section"></div> -->
+
+<!-- faqs -->
+<div class="faq-container container">
+    <h1 class="faq-header">Frequently Asked Questions</h1>
+    <div class="faq">
+        <h3 class="faq-title">Lorem fistrum tiene musho peligro condemor?</h3>
+        <p class="faq-text">
+            No te digo trigo por no llamarte Rodrigor ese pedazo de caballo blanco
+            caballo negroorl a peich.
+        </p>
+        <button class="faq-toggle">
+            <svg class="chevron w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
+            </svg>
+
+            <svg class="close w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+        </button>
+    </div>
+    <div class="faq">
+        <h3 class="faq-title">
+            Por la gloria de mi madre va usté muy cargadoo?
+        </h3>
+        <p class="faq-text">
+            Tiene musho peligro te voy a borrar el cerito torpedo torpedo de la
+            pradera sexuarl.
+        </p>
+        <button class="faq-toggle">
+            <svg class="chevron w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
+            </svg>
+
+            <svg class="close w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+        </button>
+    </div>
+    <div class="faq">
+        <h3 class="faq-title">
+            Mamaar caballo blanco caballo negroorl tiene musho peligro?
+        </h3>
+        <p class="faq-text">
+            Fistro ese pedazo de pupita a gramenawer amatomaa ese hombree va usté
+            muy cargadoo pupita.
+        </p>
+        <button class="faq-toggle">
+            <svg class="chevron w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
+            </svg>
+
+            <svg class="close w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+        </button>
+    </div>
+    <div class="faq">
+        <h3 class="faq-title">La caidita te va a hasé pupitaa?</h3>
+        <p class="faq-text">
+            Caballo blanco caballo negroorl mamaar. Ese pedazo de al ataquerl te
+            va a hasé pupitaa mamaar llevame al sircoo pupita ese pedazo de me
+            cago en tus muelas mamaar.
+        </p>
+        <button class="faq-toggle">
+            <svg class="chevron w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
+            </svg>
+
+            <svg class="close w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+        </button>
+    </div>
+    <div class="faq">
+        <h3 class="faq-title">Lorem fistrum tiene musho peligro condemor?</h3>
+        <p class="faq-text">
+            Al ataquerl quietooor no te digo trigo por no llamarte Rodrigor hasta
+            luego Lucas mamaar jarl la caidita por la gloria de mi madre no te
+            digo trigo por no llamarte Rodrigor.
+        </p>
+        <button class="faq-toggle">
+            <svg class="chevron w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
+            </svg>
+
+            <svg class="close w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+{% endblock %}
